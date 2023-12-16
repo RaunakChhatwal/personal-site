@@ -1,26 +1,31 @@
 use leptos::*;
+use leptos_router::*;
 
 #[allow(unused_imports)]
 use leptos_dom::log;
 
 mod params;
 mod about;
-use crate::about::About;
-
-#[component]
-fn Header() -> impl IntoView {
-    view! {
-
-    }
-}
+mod header;
+use crate::{about::About, header::Header};
 
 #[component]
 fn App() -> impl IntoView {
     view! {
-        <About />
+        <Router>
+            <nav>
+                <Header />
+            </nav>
+            <main>
+                <Routes>
+                    <Route path="/" view=About />
+                    <Route path="/*any" view=|| view! { <h1>Not found</h1> } />
+                </Routes>
+            </main>
+        </Router>
     }
 }
 
 fn main() {
-    leptos::mount_to_body(|| view! { <App/> })
+    mount_to_body(|| view! { <App/> })
 }

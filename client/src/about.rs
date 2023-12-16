@@ -7,9 +7,8 @@ fn Title() -> impl IntoView {
     view! {
         <div
             style:display="flex"
-            style:justiny-content="center"
+            style:justify-content="center"
             style:align-items="center"
-            style:flex-direction="row"
             style:font-size="1.1em"
         >
             <h2 style:margin="0.2em 0.5em">"Software Developer"</h2>
@@ -24,7 +23,6 @@ pub fn About() -> impl IntoView {
     view! {
         <div
             style:display="flex"
-            style:justify-content="center"
             style:align-items="center"
             style:flex-direction="column"
             style:margin-left="auto"
@@ -34,7 +32,6 @@ pub fn About() -> impl IntoView {
             <Title />
             <p
                 style:width="25%"
-                style:text-align="center"
                 style:text-align="justify"
                 style:hyphens="auto"
                 style:line-height="2"
