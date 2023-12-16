@@ -1,0 +1,1 @@
+pub const TEXT_COLOR: &str = "#e8e6e3";
