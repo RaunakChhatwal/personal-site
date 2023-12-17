@@ -1,7 +1,7 @@
 use leptos::*;
 use comrak::{markdown_to_html, ComrakOptions};
 
-use crate::params::TEXT_COLOR;
+use crate::config::TEXT_COLOR;
 
 #[component]
 fn Title() -> impl IntoView {

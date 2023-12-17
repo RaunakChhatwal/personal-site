@@ -4,10 +4,11 @@ use leptos_router::*;
 #[allow(unused_imports)]
 use leptos_dom::log;
 
-mod params;
-mod about;
+mod config;
 mod header;
-use crate::{about::Overview, header::Header};
+mod overview;
+mod resume;
+use crate::{header::Header, overview::Overview, resume::Resume};
 
 #[component]
 fn App() -> impl IntoView {
@@ -17,6 +18,7 @@ fn App() -> impl IntoView {
             <main style:flex-grow="1">
                 <Routes>
                     <Route path="/" view=Overview />
+                    <Route path="/resume" view=Resume />
                     <Route path="/*any" view=|| view! { <h1>Not found</h1> } />
                 </Routes>
             </main>

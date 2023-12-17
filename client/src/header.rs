@@ -1,7 +1,7 @@
 use leptos::*;
 use leptos_router::*;
 
-use crate::params::BACKGROUND_COLOR;
+use crate::config::{TEXT_COLOR, BACKGROUND_COLOR, LINKEDIN_URL};
 
 const HEADER_HEIGHT: &str = "5vh";
 
@@ -58,16 +58,19 @@ pub fn Header() -> impl IntoView {
                 >
                     <HeaderLink text_content="About" href="/" new_tab=false />
                     <HeaderLink text_content="Resume" href="/resume" new_tab=false />
+                    <HeaderLink text_content="Projects" href="/projects" new_tab=false />
                     <HeaderLink text_content="Interests" href="/interests" new_tab=false />
                 </div>
             </nav>
             <div
                 style:display="flex"
                 style:justify-content="flex-end"
+                style:align-items="center"
                 style:width="100%"
             >
                 <p style:margin="0 1em" style:text-align="center" style:line-height=HEADER_HEIGHT>"raunakchhatwal001@gmail.com"</p>
-                <HeaderLink text_content="LinkedIn" href="https://www.linkedin.com/in/raunak-chhatwal-69633b154/" new_tab=true />
+                <div style:width="1px" style:height="1em" style:margin=0 style:background-color=TEXT_COLOR></div>
+                <HeaderLink text_content="LinkedIn" href=LINKEDIN_URL new_tab=true />
                 <HeaderLink text_content="Github" href="https://github.com/RaunakChhatwal" new_tab=true />
             </div>
         </header>
