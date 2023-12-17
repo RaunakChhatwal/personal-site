@@ -13,9 +13,7 @@ use crate::{about::Overview, header::Header};
 fn App() -> impl IntoView {
     view! {
         <Router>
-            <nav>
-                <Header />
-            </nav>
+            <Header />
             <main style:flex-grow="1">
                 <Routes>
                     <Route path="/" view=Overview />
