@@ -7,7 +7,7 @@ use leptos_dom::log;
 mod params;
 mod about;
 mod header;
-use crate::{about::About, header::Header};
+use crate::{about::Overview, header::Header};
 
 #[component]
 fn App() -> impl IntoView {
@@ -16,9 +16,9 @@ fn App() -> impl IntoView {
             <nav>
                 <Header />
             </nav>
-            <main>
+            <main style:flex-grow="1">
                 <Routes>
-                    <Route path="/" view=About />
+                    <Route path="/" view=Overview />
                     <Route path="/*any" view=|| view! { <h1>Not found</h1> } />
                 </Routes>
             </main>

@@ -39,7 +39,7 @@ pub fn Header() -> impl IntoView {
     view! {
         <header
             style:height="5vh"
-            style:font-size="1.3em"
+            style:font-size="1.1em"
             style:display="flex"
             style:justify-content="flex-start"
         >
