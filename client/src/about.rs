@@ -1,4 +1,5 @@
 use leptos::*;
+use comrak::{markdown_to_html, ComrakOptions};
 
 use crate::params::TEXT_COLOR;
 
@@ -20,6 +21,8 @@ fn Title() -> impl IntoView {
 
 #[component]
 fn About() -> impl IntoView {
+    let description_html = markdown_to_html(include_str!("./description.md"), &ComrakOptions::default());
+
     view! {
         <div
             style:display="flex"
@@ -35,7 +38,7 @@ fn About() -> impl IntoView {
                 style:text-align="justify"
                 style:hyphens="auto"
                 style:line-height="2"
-            >{include_str!("./description.txt")}</p>        // FIXME: convert to markdown
+                inner_html=description_html />
         </div>
     }
 }
