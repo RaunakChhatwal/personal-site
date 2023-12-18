@@ -12,7 +12,7 @@ fn HeaderLink(text_content: &'static str, href: &'static str, new_tab: bool) -> 
     let (background_color, set_background_color) = create_signal(BACKGROUND_COLOR);
 
     create_effect(move |_| {
-        if location.pathname.get() == href.to_string() || hover.get() {
+        if location.pathname.get() == *href || hover.get() {
             set_background_color.set("rgb(32, 35, 37)")
         } else {
             set_background_color.set(BACKGROUND_COLOR)

@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Software Engineering Intern",
+        "employer": "GE Healthcare",
+        "duration": "May to Aug 2023",
+        "about": [
+            "Joined the CT image generation team in charge of the implementation and optimization of algorithm designs submitted to us by our CT research teams.",
+            "Took ownership of a neglected Python internal tool aimed at the profiling and analysis of CPU/GPU performance and memory usage data across a cluster of machines.",
+            "Improved the distributed profiler's reliability to passing 48-hour stress runs by implementing changes such as switching communication channel to sockets, among many others.",
+            "Developed familiarity with working within a >1million LOC C++ and Python codebase."
+        ]
+    },
+    {
+        "title": "Software Engineering Intern",
+        "employer": "GE Healthcare",
+        "duration": "May to Aug 2022",
+        "about": [
+            "Joined the main development team behind GE's private cloud called Edison Health Link.",
+            "Created an API meant to expose to the caller (a microservice deployed to EHL) the ynderlying hardware configuration hosting that microservice.",
+            "Implemented the API in Node.js, Express and deployed it as its own microservice to our Kubernetes cluster.",
+            "Learned Devops fundamentals (I have since completed the CKA certification)."
+        ]
+    }
+]

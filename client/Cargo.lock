@@ -301,6 +301,8 @@ dependencies = [
  "comrak",
  "leptos",
  "leptos_router",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
