@@ -10,7 +10,7 @@ fn Header() -> impl IntoView {
             <h1 class="text-[1.5em]" style:margin="0.1em 0">Raunak Chhatwal</h1>
             <div class="flex flex-col md:flex-row items-center serif">
                 <p style:margin="0 0.5em 0 0">"Phone: +1-813-807-1581"</p>
-                <div class="hidden md:inline-block w-[2px] h-[1em]" style:background-color=TEXT_COLOR></div>        // the border
+                <div class="hidden md:block w-[2px] h-[1em]" style:background-color=TEXT_COLOR></div>        // the border
                 <p style:margin="0 0.5em">"Email: raunakchhatwal001@gmail.com"</p>
             </div>
             <p style:margin=0>"LinkedIn: "<a class="text-blue-500 underline" href=LINKEDIN_URL>{LINKEDIN_URL}</a></p>
@@ -28,7 +28,7 @@ fn Education() -> impl IntoView {
             <ul class="list-disc" style:list-style-position="inside">{[
                 "Bachelors of Science in Computer Science",
                 "GPA: 3.49",
-                "Expect graduation date: May 2024",
+                "Expected graduation date: May 2024",
                 "Member of the Society of Competitive Programmers club"
             ].into_iter().map(|entry| view! { <li style:font-size="0.9em">{entry}</li> }).collect_view()}</ul>
         </div>

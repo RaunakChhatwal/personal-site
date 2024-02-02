@@ -16,7 +16,7 @@
         "duration": "May to Aug 2022",
         "about": [
             "Joined the main development team behind GE's private cloud called Edison Health Link.",
-            "Created an API meant to expose to the caller (a microservice deployed to EHL) the ynderlying hardware configuration hosting that microservice.",
+            "Created an API meant to expose to the caller (a microservice deployed to EHL) the underlying hardware configuration hosting that microservice.",
             "Implemented the API in Node.js, Express and deployed it as its own microservice to our Kubernetes cluster.",
             "Learned Devops fundamentals (I have since completed the CKA certification)."
         ]

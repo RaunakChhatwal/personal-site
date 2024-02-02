@@ -24,9 +24,8 @@ fn HeaderLink(text_content: &'static str, href: &'static str, new_tab: bool) -> 
         <a href={href}
             on:mouseenter=move |_| set_hover.set(true)
             on:mouseleave=move |_| set_hover.set(false)
-            class="m-0 text-center block no-underline text-inherit"
+            class="m-0 text-center block no-underline text-inherit w-[6rem]"
             style:background-color=background_color
-            style:width="8rem"
             style:font="inherit"
             style:line-height=HEADER_HEIGHT
         >{text_content}</a>
@@ -54,13 +53,12 @@ pub fn Header() -> impl IntoView {
                 <div class="flex justify-start">
                     <HeaderLink text_content="About" href="/" new_tab=false />
                     <HeaderLink text_content="Resume" href="/resume" new_tab=false />
-                    <HeaderLink text_content="Projects" href="/projects" new_tab=false />
                     <HeaderLink text_content="Interests" href="/interests" new_tab=false />
                 </div>
             </nav>
             <div class="flex justify-end items-center w-full">
                 <p class="text-center text-[0.8em] md:text-[1em]" style:margin="0 1em" style:line-height=HEADER_HEIGHT>"raunakchhatwal001@gmail.com"</p>
-                <div class="m-0" style:width="1px" style:height="1em" style:background-color=TEXT_COLOR></div>
+                <div class="m-0 w-[1px] h-[1em]" style:background-color=TEXT_COLOR></div>
                 <HeaderLink text_content="LinkedIn" href=LINKEDIN_URL new_tab=true />
                 <HeaderLink text_content="Github" href="https://github.com/RaunakChhatwal" new_tab=true />
             </div>

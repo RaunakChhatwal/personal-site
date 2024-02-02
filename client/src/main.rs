@@ -8,7 +8,8 @@ mod config;
 mod header;
 mod overview;
 mod resume;
-use crate::{header::Header, overview::Overview, resume::Resume};
+mod skills;
+use crate::{header::Header, overview::Overview, resume::Resume, skills::Skills};
 
 #[component]
 fn App() -> impl IntoView {
@@ -19,6 +20,7 @@ fn App() -> impl IntoView {
                 <Routes>
                     <Route path="/" view=Overview />
                     <Route path="/resume" view=Resume />
+                    <Route path="/interests" view=Skills />
                     <Route path="/*any" view=|| view! { <h1>Not found</h1> } />
                 </Routes>
             </main>
