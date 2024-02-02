@@ -6,12 +6,7 @@ use crate::config::TEXT_COLOR;
 #[component]
 fn Title() -> impl IntoView {
     view! {
-        <div
-            style:display="flex"
-            style:justify-content="center"
-            style:align-items="center"
-            style:font-size="1.1em"
-        >
+        <div class="flex justify-center items-center text-[1.6em]">
             <h2 style:margin="0.2em 0.5em">"Software Developer"</h2>
             <div style:width="2px" style:height="1.5em" style:background-color=TEXT_COLOR></div>        // the border
             <h2 style:margin="0.2em 0.5em">"C.S. Student"</h2>
@@ -25,13 +20,10 @@ fn About() -> impl IntoView {
 
     view! {
         <div
-            style:display="flex"
-            style:justify-content="flex-start"
-            style:align-items="center"
-            style:flex-direction="column"
+            class="flex flex-col justify-start items-center"
             style:margin-left="4vw"
         >
-            <h1 style:font-size="4em" style:margin="0.2em 0">"Raunak Chhatwal"</h1>
+            <h1 class="m-0" style:font-size="4em">"Raunak Chhatwal"</h1>
             <Title />
             <p
                 style:width="26em"
@@ -46,12 +38,7 @@ fn About() -> impl IntoView {
 #[component]
 pub fn Overview() -> impl IntoView {
     view! {
-        <div
-            style:display="flex"
-            style:justify-content="center"
-            style:align-items="center"
-            style:margin-top="10vh"
-        >
+        <div class="flex justify-center items-center m-0 h-full">
             <img
                 src="profile-picture.jpg"
                 alt="Picture of Raunak"

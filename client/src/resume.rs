@@ -6,24 +6,14 @@ use crate::config::{TEXT_COLOR, LINKEDIN_URL};
 #[component]
 fn Header() -> impl IntoView {
     view! {
-        <div
-            style:display="flex"
-            style:align-items="center"
-            style:flex-direction="column"
-            style:margin-left="auto"
-            style:margin-right="auto"
-        >
-            <h1 style:margin="0.1em 0">Raunak Chhatwal</h1>
-            <div
-                style:display="flex"
-                style:align-items="center"
-                style:font-family="serif"
-            >
+        <div class="flex flex-col items-center mx-auto">
+            <h1 class="text-[1.5em]" style:margin="0.1em 0">Raunak Chhatwal</h1>
+            <div class="flex flex-col md:flex-row items-center serif">
                 <p style:margin="0 0.5em 0 0">"Phone: +1-813-807-1581"</p>
-                <div style:width="2px" style:height="1em" style:background-color=TEXT_COLOR></div>        // the border
+                <div class="hidden md:inline-block w-[2px] h-[1em]" style:background-color=TEXT_COLOR></div>        // the border
                 <p style:margin="0 0.5em">"Email: raunakchhatwal001@gmail.com"</p>
             </div>
-            <p style:margin=0>"LinkedIn:"<a href=LINKEDIN_URL>{LINKEDIN_URL}</a></p>
+            <p style:margin=0>"LinkedIn: "<a class="text-blue-500 underline" href=LINKEDIN_URL>{LINKEDIN_URL}</a></p>
         </div>
     }
 }
@@ -31,11 +21,11 @@ fn Header() -> impl IntoView {
 #[component]
 fn Education() -> impl IntoView {
     view! {
-        <div class="resume" style:margin-top="8vh">
-            <h2 style:font-weight="bold">"Education"</h2>
-            <div style:width="100%" style:height="3px" style:background-color=TEXT_COLOR></div>
-            <p style:font-size="1.1em">"University of South Florida"</p>
-            <ul>{[
+        <div class="resume" style:margin-top="6vh">
+            <h2 class="text-[1.2em] font-bold">"Education"</h2>
+            <div class="w-full h-[3px]" style:background-color=TEXT_COLOR></div>
+            <p class="text-[1.2em]">"University of South Florida"</p>
+            <ul class="list-disc" style:list-style-position="inside">{[
                 "Bachelors of Science in Computer Science",
                 "GPA: 3.49",
                 "Expect graduation date: May 2024",
@@ -59,16 +49,18 @@ fn WorkExperience() -> impl IntoView {
 
     view! {
         <div class="resume" style:margin-top="4vh">
-            <h2 style:font-weight="bold">"Work Experience"</h2>
-            <div style:width="100%" style:height="3px" style:background-color=TEXT_COLOR></div>
+            <h2 class="text-[1.2em] font-bold">"Work Experience"</h2>
+            <div class="w-full h-[3px]" style:background-color=TEXT_COLOR></div>
             {work_experience.iter().enumerate().map(|(i, JobEntry { title, employer, duration, about })| view! {
                 <div>
                     <p
-                        style:font-size="1.1em"
+                        class="text-[1.2em] underline"
                         style:margin-top=move || (i > 0).then_some("3vh")
                     >{title}</p>
-                    <p style:font-size="0.9em">{format!("{employer} | {duration}")}</p>
-                    <ul>{about.iter().map(|description| view! { <li style:font-size="0.9em">{description}</li> }).collect_view()}</ul>
+                    <p class="text-[0.9em]">{format!("{employer} | {duration}")}</p>
+                    <ul class="list-disc" style:list-style-position="inside">{about.iter().map(|description|
+                        view! { <li style:font-size="0.9em">{description}</li> }
+                    ).collect_view()}</ul>
                 </div>
             }).collect_view()}
         </div>
@@ -79,12 +71,8 @@ fn WorkExperience() -> impl IntoView {
 pub fn Resume() -> impl IntoView {
     view !{
         <div
-            style:margin-top="10vh"
-            style:margin-left="auto"
-            style:margin-right="auto"
-            style:width="50vw"
-            style:display="flex"
-            style:flex-direction="column"
+            class="flex flex-col md:text-[1.1em] w-[90vw] md:w-[50vw]"
+            style:margin="13vh auto"
         >
             <Header />
             <Education />
