@@ -6,7 +6,7 @@ use crate::config::{TEXT_COLOR, LINKEDIN_URL};
 #[component]
 fn Header() -> impl IntoView {
     view! {
-        <div class="flex flex-col items-center mx-auto">
+        <div class="flex flex-col items-center mx-auto text-center">
             <h1 class="text-[1.5em]" style:margin="0.1em 0">Raunak Chhatwal</h1>
             <div class="flex flex-col md:flex-row items-center serif">
                 <p style:margin="0 0.5em 0 0">"Phone: +1-813-807-1581"</p>

@@ -33,7 +33,7 @@ fn About() -> impl IntoView {
             <h1 class="m-0 text-[2em] md:text-[4em]">"Raunak Chhatwal"</h1>
             <Title />
             <p
-                class="md:w-[26em]"
+                class="md:w-[26em] text-[0.9em] md:text-[1em]"
                 style:text-align="justify"
                 style:hyphens="auto"
                 style:line-height="2"
@@ -45,7 +45,7 @@ fn About() -> impl IntoView {
 #[component]
 pub fn Overview() -> impl IntoView {
     view! {
-        <div class="flex flex-col md:flex-row justify-center items-center mx-auto w-[90%] h-full">
+        <div class="flex flex-col md:flex-row justify-center items-center mx-auto w-[90%] h-full text-center">
             <img
                 src="profile-picture.jpg"
                 alt="Picture of Raunak"

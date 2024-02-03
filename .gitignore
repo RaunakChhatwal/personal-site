@@ -2,3 +2,4 @@ target/
 /.vscode
 /shell.nix
 /client/dist
+/client/public/index.css
